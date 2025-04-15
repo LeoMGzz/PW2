@@ -140,7 +140,7 @@ app.post("/plataformas/crear", (req, res) => {
 
 /////////Plataformas Activas/////////////
 app.get("/plataformas/activas", (req, res) => {
-    const query = "SELECT IdPlataforma, Nombre, Año_Lanzamiento FROM Plataformas WHERE Estatus = 'Activo'";
+    const query = "SELECT IdPlataforma, Nombre, Año_Lanzamiento FROM plataformas WHERE Estatus = 'Activo'";
 
     db.query(query, (err, results) => {
         if (err) {
