@@ -99,7 +99,7 @@ const [passwords, setPasswords] = useState({ actual: "", nueva: "" });
         ? profilePic.split(",")[1]
         : localStorage.getItem("fotoPerfil");
   
-      const response = await axios.put(`http://localhost:3001/usuarios/editar/${idUsuario}`, {
+      const response = await axios.put(`https://pw2-production.up.railway.app/usuarios/editar/${idUsuario}`, {
         username: formData.username,
         fechaNacimiento: formData.birthdate,
         fotoPerfil: imageBase64,
@@ -152,7 +152,7 @@ const [passwords, setPasswords] = useState({ actual: "", nueva: "" });
     
   
     try {
-      const response = await axios.put(`http://localhost:3001/usuarios/cambiar-contrasena/${idUsuario}`, {
+      const response = await axios.put(`https://pw2-production.up.railway.app/usuarios/cambiar-contrasena/${idUsuario}`, {
         actual: passwords.actual,
         nueva: passwords.nueva
       });
@@ -238,7 +238,7 @@ const [passwords, setPasswords] = useState({ actual: "", nueva: "" });
     const idUsuario = localStorage.getItem("idUsuario");
 
     try {
-      const response = await axios.put(`http://localhost:3001/usuarios/eliminar/${idUsuario}`);
+      const response = await axios.put(`https://pw2-production.up.railway.app/usuarios/eliminar/${idUsuario}`);
       await MySwal.fire({
         icon: "success",
         title: "Cuenta eliminada",

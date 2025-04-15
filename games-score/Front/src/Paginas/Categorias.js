@@ -20,7 +20,7 @@ const Categorias = () => {
 
   const obtenerCategorias = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/categorias/activas");
+      const response = await axios.get("https://pw2-production.up.railway.app/categorias/activas");
       setCategorias(response.data);
     } catch (error) {
       console.error("Error al obtener categorías activas:", error);
@@ -46,7 +46,7 @@ const Categorias = () => {
 
     try {
       if (categoriaSeleccionada) {
-        await axios.put(`http://localhost:3001/categorias/editar/${categoriaSeleccionada}`, {
+        await axios.put(`https://pw2-production.up.railway.app/categorias/editar/${categoriaSeleccionada}`, {
           nombre,
           descripcion,
         });
@@ -57,7 +57,7 @@ const Categorias = () => {
           text: "Categoría editada con éxito",
         });
       } else {
-        await axios.post("http://localhost:3001/categorias/crear", {
+        await axios.post("https://pw2-production.up.railway.app/categorias/crear", {
           nombre,
           descripcion,
         });
@@ -110,7 +110,7 @@ const Categorias = () => {
     if (!confirmar.isConfirmed) return;
 
     try {
-      await axios.put(`http://localhost:3001/categorias/eliminar/${categoriaSeleccionada}`);
+      await axios.put(`https://pw2-production.up.railway.app/categorias/eliminar/${categoriaSeleccionada}`);
 
       await MySwal.fire({
         icon: "success",

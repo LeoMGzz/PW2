@@ -20,7 +20,7 @@ const Plataformas = () => {
 
   const obtenerPlataformas = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/plataformas/activas");
+      const response = await axios.get("https://pw2-production.up.railway.app/plataformas/activas");
       setPlataformas(response.data);
     } catch (error) {
       console.error("Error al obtener plataformas activas:", error);
@@ -65,7 +65,7 @@ const Plataformas = () => {
 
     try {
       if (plataformaSeleccionada) {
-        await axios.put(`http://localhost:3001/plataformas/editar/${plataformaSeleccionada}`, {
+        await axios.put(`https://pw2-production.up.railway.app/plataformas/editar/${plataformaSeleccionada}`, {
           nombre,
           año_lanzamiento: añoLanzamiento,
         });
@@ -76,7 +76,7 @@ const Plataformas = () => {
           text: "Plataforma editada con éxito",
         });
       } else {
-        await axios.post("http://localhost:3001/plataformas/crear", {
+        await axios.post("https://pw2-production.up.railway.app/plataformas/crear", {
           nombre,
           año_lanzamiento: añoLanzamiento,
         });
@@ -117,7 +117,7 @@ const Plataformas = () => {
     if (!result.isConfirmed) return;
 
     try {
-      await axios.put(`http://localhost:3001/plataformas/eliminar/${plataformaSeleccionada}`);
+      await axios.put(`https://pw2-production.up.railway.app/plataformas/eliminar/${plataformaSeleccionada}`);
 
       await MySwal.fire({
         icon: "success",

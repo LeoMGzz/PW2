@@ -19,7 +19,7 @@ const Companias = () => {
 
   const obtenerCompanias = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/companias/activas");
+      const response = await axios.get("https://pw2-production.up.railway.app/companias/activas");
       setCompanias(response.data);
     } catch (error) {
       console.error("Error al obtener compañías activas:", error);
@@ -45,7 +45,7 @@ const Companias = () => {
 
     try {
       if (companiaSeleccionada) {
-        await axios.put(`http://localhost:3001/companias/editar/${companiaSeleccionada}`, {
+        await axios.put(`https://pw2-production.up.railway.app/companias/editar/${companiaSeleccionada}`, {
           nombre: nombre,
         });
         await MySwal.fire({
@@ -54,7 +54,7 @@ const Companias = () => {
           text: "¡Compañía editada con éxito!",
         });
       } else {
-        await axios.post("http://localhost:3001/companias/crear", {
+        await axios.post("https://pw2-production.up.railway.app/companias/crear", {
           nombre: nombre,
         });
         await MySwal.fire({
@@ -102,7 +102,7 @@ const Companias = () => {
     if (!confirmar.isConfirmed) return;
 
     try {
-      await axios.put(`http://localhost:3001/companias/eliminar/${companiaSeleccionada}`);
+      await axios.put(`https://pw2-production.up.railway.app/companias/eliminar/${companiaSeleccionada}`);
       await MySwal.fire({
         icon: "success",
         title: "Desactivada",

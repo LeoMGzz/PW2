@@ -97,7 +97,7 @@ const Register = () => {
     if (!validateForm()) return;
 
     try {
-      const response = await axios.post("http://localhost:3001/register", {
+      const response = await axios.post("https://pw2-production.up.railway.app/register", {
         email: formData.email,
         username: formData.username,
         password: formData.password,

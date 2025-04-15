@@ -40,7 +40,7 @@ const { log } = useContext(AuthContext);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/videojuegos/activos");
+        const response = await axios.get("https://pw2-production.up.railway.app/videojuegos/activos");
         const filtrados = response.data.filter((j) => {
           return (
             (!nombre || j.Nombre.toLowerCase().includes(nombre.toLowerCase())) &&
@@ -60,9 +60,9 @@ const { log } = useContext(AuthContext);
   }, [nombre, categoria, plataforma, anio, desarrolladora, publicadora]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/categorias/activas").then((res) => setCategoriasDisponibles(res.data));
-    axios.get("http://localhost:3001/plataformas/activas").then((res) => setPlataformasDisponibles(res.data));
-    axios.get("http://localhost:3001/companias/activas").then((res) => setCompaniasDisponibles(res.data));
+    axios.get("https://pw2-production.up.railway.app/categorias/activas").then((res) => setCategoriasDisponibles(res.data));
+    axios.get("https://pw2-production.up.railway.app/plataformas/activas").then((res) => setPlataformasDisponibles(res.data));
+    axios.get("https://pw2-production.up.railway.app/companias/activas").then((res) => setCompaniasDisponibles(res.data));
   }, []);
 
   const handleAdvancedSearch = (e) => {

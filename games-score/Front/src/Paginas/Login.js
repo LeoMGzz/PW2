@@ -27,7 +27,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3001/login", {
+      const response = await axios.post("https://pw2-production.up.railway.app/login", {
         email: email,
         password: password,
       });
