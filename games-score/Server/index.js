@@ -14,12 +14,13 @@ app.listen(3001, () => {
 });
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "game-score",
-    port: 3306 
+  host: "caboose.proxy.rlwy.net",
+  user: "root",
+  password: "ZvnCmfxQHzLmFmfuHjYRbAXSVzzUvXKp",
+  database: "railway",
+  port: 14743
 });
+
 
 db.connect((err) => {
     if (err) {
