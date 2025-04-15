@@ -14,20 +14,19 @@ app.listen(3001, () => {
 });
 
 const db = mysql.createConnection({
-  host: "caboose.proxy.rlwy.net",
-  user: "root",
-  password: "ZvnCmfxQHzLmFmfuHjYRbAXSVzzUvXKp",
-  database: "railway",
-  port: 14743
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT
 });
 
-
 db.connect((err) => {
-    if (err) {
-        console.error("Error conectando a la base de datos:", err);
-        return;
-    }
-    console.log("Conectado a la base de datos MySQL");
+  if (err) {
+    console.error("❌ Error al conectar a la base de datos:", err);
+    return;
+  }
+  console.log("✅ Conectado a la base de datos MySQL");
 });
 
 ///////////////////Creacion Usuario////////////////////////////////////
