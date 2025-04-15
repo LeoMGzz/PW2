@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "PressStart2P";
+    src: url("../Assets/Fonts/PressStart2P-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+footer {
+    background: linear-gradient(to right, #003a89, #c700ff);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .footer-info h3{
+    font-family: "PressStart2P", sans-serif;
+  }
+  
+  .footer-us h3 {
+    font-family: "PressStart2P", sans-serif;
+    margin: 0;
+  }
+  
+  .footer-us ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-us li {
+    margin: 5px 0;
+  }
+  
+  .footer-copyright {
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  

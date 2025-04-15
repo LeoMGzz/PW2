@@ -1,0 +1,147 @@
+.Busqueda-Avanzada-header{
+  font-family: "PressStart2P", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #8c52ff;
+  text-align:center;
+}
+/*
+.manage-games-container {
+  padding: 20px;
+  text-align: center;
+}
+  */
+
+
+  .register-game-button {
+    position: fixed;
+    bottom: 30px; /* distancia desde abajo */
+    right: 30px;  /* distancia desde la derecha */
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #8c52ff, #3d1766);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    z-index: 1000; /* Asegura que esté encima */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+  }
+  
+  .register-game-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #3d1766, #8c52ff);
+  }
+
+.game-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #8c52ff;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #6c3acb;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  
+}
+
+.pagination-buttons button {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #8c52ff;
+  color: white;
+}
+
+
+.pagination-buttons button:hover {
+  background-color: #6c3acb;
+}
+
+.advanced-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 12px;
+  
+}
+
+.advanced-search-form input,
+.advanced-search-form select {
+  padding: 10px;
+  
+  border: none;
+  border-radius: 25px;
+  background-color: #e0e0e0; 
+  text-align: center;
+  font-size: 1rem;
+  color: #3d1766; 
+  font-weight: bold;
+  outline: none;
+
+
+  flex: 1 1 200px;
+
+  
+
+}
+
+.advanced-search-form input:focus,
+.advanced-search-form select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.advanced-search-form button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.advanced-search-form button:hover {
+  background-color: #0056b3;
+}

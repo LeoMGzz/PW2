@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("../Assets/Fonts/BebasNeue-Regular.ttf") format("truetype");
+    font-weight: bold; 
+    font-style: normal;
+}
+
+.plataforma-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px;
+}
+
+  
+  .plataforma-left-side {
+    width: 45%;
+    background-color: none;
+    border-radius: 20px;
+    position: relative;
+    padding: 20px;
+  }
+  
+  .plataforma-category-list {
+    height: 600px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    overflow-y: auto; 
+  overflow-x: hidden;
+  font-family: BebasNeue;
+    font-size: 30px;
+  }
+  
+  .plataforma-trash-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .plataforma-right-side {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .plataforma-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .plataforma-text {
+    font-family: BebasNeue;
+    font-size: 30px;
+    font-weight: bold;
+    color: #4b2872;
+  }
+
+  .plataforma-registro-text
+  {
+    font-family: BebasNeue;
+    font-size: 50px;
+    font-weight: bold;
+    color: #4b2872;
+  }
+  
+  .plataforma-input-field, .plataforma-textarea-field {
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #b3adb3;
+  }
+  
+  .plataforma-textarea-field {
+    height: 40px;
+    padding: 10px;
+  }
+  
+  .plataforma-register-button, .plataforma-edit-button {
+    background-color: #4b2872;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 60%;
+    margin: 0 auto; 
+    display: block;
+  }
+  
+  .plataforma-register-button:hover, .plataforma-edit-button:hover {
+    background-color: #3a1f5a;
+  }
+
+  .plataforma-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px; 
+    margin-bottom: 5px; 
+
+  }
+  
+.plataforma-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+  margin-top: 10px;
+}
+
+.plataforma-delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 60%;
+}
+
+.plataforma-delete-button:hover {
+  background-color: darkred;
+}
+
+.plataforma-input-field, 
+.plataforma-textarea-field {
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #b3adb3;
+    font-size: 18px;
+    font-weight: bold; 
+    color: #000; 
+}

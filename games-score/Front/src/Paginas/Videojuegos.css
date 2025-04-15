@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("../Assets/Fonts/BebasNeue-Regular.ttf") format("truetype");
+    font-weight: bold; 
+    font-style: normal;
+}
+
+.videojuego-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: white;
+  }
+  
+  .videojuego-left-section {
+    width: 66%;
+    padding: 2.5rem;
+    margin-left: 200px;
+    
+    
+}
+  .videojuego-info-block {
+    margin-bottom: 1.5rem;
+    
+  }
+
+  .videojuego-info-block label {
+    display: block;
+    color: #4B0082;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-family: BebasNeue;
+    font-size: 20px;
+  }
+  .videojuego-info-block input {
+  height: 25px;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #b3adb3;
+}
+
+.videojuego-info-block select{
+  height: 45px;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #b3adb3;
+  width: 50%;
+}
+
+
+  .videojuego-short {
+    width: 33%;
+  }
+  
+  .videojuego-short2 {
+    width: 70%;
+  }
+  
+  .videojuego-textarea {
+    
+    width: 70%;
+    height: 80px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #b3adb3;
+    color: black;
+  font-weight: bold;
+  }
+  
+ 
+  
+
+  .videojuego-register-button {
+    font-weight: bold;
+    
+    margin-bottom: -1px;
+
+    font-size: 20px;
+  
+    background-color: #4b2872;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px;
+  cursor: pointer;
+  width: 40%;
+  margin: 0 auto; 
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  
+  font-family: BebasNeue;
+    
+  }
+  .videojuego-register-button:hover{
+    background-color: #b6afb6;
+  }
+  
+  .videojuego-right-section {
+    width: 40%;
+    padding: 2.5rem;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  
+  .videojuego-boxart-title {
+    color: #4B0082;
+    font-weight: bold;
+    
+    margin-bottom: -1px;
+    font-family: BebasNeue;
+    font-size: 30px;
+  }
+  
+  .videojuego-boxart {
+    width: 200px;
+    height: 300px;
+    margin-bottom: 1rem;
+    
+  }
+  
+  .videojuego-boxart-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .videojuego-boxart-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #1E3A8A;
+  }
+  
+  .videojuego-upload-button {
+  background-color: #4b2872;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px;
+  cursor: pointer;
+  width: 40%;
+  margin: 0 auto; 
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 15px;
+  }
+  .videojuego-upload-button:hover{
+    background-color: #b6afb6;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .videojuego-checkbox-group-scrollable {
+    background-color: #b6afb6;
+    border-radius: 20px;
+    width: 100%;
+    padding: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 8px;
+  }
+  
+  .videojuego-checkbox-group-scrollable > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .videojuego-checkbox-group-scrollable label {
+    color: #3d1766;
+    font-family: BebasNeue;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  
+  /*
+  .videojuego-info-block label {
+  display: block;
+  color: #4B0082;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: BebasNeue;
+  font-size: 20px;
+}/*
+
+  /*
+  .videojuego-label {
+    display: block;
+    color: #4B0082;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-family: BebasNeue;
+    font-size: 30px;
+  }
+ 
+  .videojuego-input {
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #b3adb3;
+  }
+   */
+
+  /*
+  .videojuego-input, 
+.videojuego-textarea {
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #b3adb3;
+  font-size: 18px;
+  font-weight: bold; 
+  color: #000; 
+}
+*/

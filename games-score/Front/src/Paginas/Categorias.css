@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../Assets/Fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: bold; 
+  font-style: normal;
+}
+
+.categoria-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  
+  padding: 20px;
+}
+
+
+.categoria-left-side {
+  width: 45%;
+  background-color: none;
+  border-radius: 20px;
+  position: relative;
+  padding: 20px;
+}
+
+.categoria-category-list {
+  height: 600px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  overflow-y: auto; 
+overflow-x: hidden;
+font-family: BebasNeue;
+  font-size: 30px;
+}
+.categoria-trash-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.categoria-right-side {
+   width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categoria-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.categoria-text {
+  font-family: BebasNeue;
+  font-size: 30px;
+  font-weight: bold;
+  color: #4b2872;
+}
+
+.categoria-registro-text
+{
+  font-family: BebasNeue;
+  font-size: 50px;
+  font-weight: bold;
+  color: #4b2872;
+}
+
+.categoria-input-field, .categoria-textarea-field {
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #b3adb3;
+}
+
+.categoria-textarea-field {
+  height: 80px;
+  padding: 10px;
+}
+
+.categoria-register-button, .categoria-edit-button {
+  background-color: #4b2872;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 60%;
+  margin: 0 auto; 
+  display: block;
+}
+
+.categoria-register-button:hover, .categoria-edit-button:hover {
+  background-color: #3a1f5a;
+}
+
+.categoria-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px; 
+  margin-bottom: 5px; 
+
+}
+
+.categoria-button-group {
+display: flex;
+justify-content: center;
+gap: 15px; 
+margin-top: 10px;
+}
+
+.categoria-delete-button {
+background-color: red;
+color: white;
+border: none;
+border-radius: 20px;
+padding: 15px;
+font-weight: bold;
+cursor: pointer;
+width: 60%;
+}
+
+.categoria-delete-button:hover {
+background-color: darkred;
+}
+
+.categoria-input-field, 
+.categoria-textarea-field {
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #b3adb3;
+  font-size: 18px;
+  font-weight: bold; 
+  color: #000; 
+}
+

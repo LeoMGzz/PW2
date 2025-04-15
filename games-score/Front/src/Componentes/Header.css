@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url("../Assets/Fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+    font-weight: bold; 
+    font-style: normal;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: "OpenSans", sans-serif; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #003a89, #c700ff);
+    color: white;
+  }
+ 
+
+  .logo {
+    width: 300px;
+    height: auto;
+    padding: 5px 10px;
+  }
+
+  .search-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-input {
+    width: 50%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+  }
+
+  
+
+  .divider {
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    margin: 0 15px;
+  }
+
+  .divider-2 {
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    margin: 0 15px;
+    align-self: center;
+  }
+  
+  
+  .right-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-right: 20px;
+    height: 100%;
+  }
+  
+  
+  .right-container button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+  }
+
+  .right-container button:hover {
+    color:white;
+    text-shadow:  2px  2px 0  #003a89;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  
+  object-fit: cover;
+  margin-bottom: 0px;
+}
+
+  
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dropdown-menu button {
+  background-color: none;
+  color: rgb(155, 98, 168);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  
+  font-size: 15px;
+}
+
+.dropdown-menu a {
+  display: block;
+  width: 100%;
+}
+
+
+.dropdown-menu button:hover {
+  color: black;
+  text-shadow: none;
+}
+
+.divider-3 {
+  width: 130px;
+  height: 1.5px;
+  background-color: lightgray;
+  
+}
+

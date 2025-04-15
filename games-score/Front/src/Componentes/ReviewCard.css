@@ -1,0 +1,130 @@
+
+.review-card {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 15px;
+    width: 95%; 
+    max-width: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    overflow-x: hidden;
+  }
+  
+  .game-image-review {
+    width: 80px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .review-content {
+    flex-grow: 1;
+  }
+  
+  .review-header {
+   margin-bottom: 10px;;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .review-date {
+    color: gray;
+    font-size: 10px;
+    margin-left: 12px;
+    font-weight: normal;
+  }
+
+  .review-input {
+    width: 98%;
+    font-size: 15px;
+    padding: 8px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+    color: #333;
+    outline: none;
+  }
+  
+  .review-input:disabled {
+    border: none;
+    background: transparent;
+    color: #333;
+  }
+  
+  .review-input:enabled {
+    border: 1px solid #8c52ff;
+    background: white;
+  }
+  
+  .review-rating {
+    display: flex;
+    gap: 3px;
+  }
+  
+  .star {
+    color: gray;
+    font-size: 16px;
+  }
+  
+  .filled-star {
+    color: #8c52ff;
+  }
+  
+  .review-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-icon, .delete-icon, .confirm-icon {
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+  }
+  
+  .edit-icon:hover {
+    color: #8c52ff;
+  }
+  
+  .confirm-icon {
+    color: #8c52ff;
+  }
+  
+  .delete-icon:hover {
+    color: red;
+  }
+  
+  .user-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    width: 97%; 
+  }
+
+  .GameReview {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+  
+  }
+
+.GameReview h1{
+
+  font-family: "OpenSans", sans-serif;
+  color: #8c52ff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 30px; 
+  white-space: nowrap; 
+
+}
+
+.GameReview::after {
+  content: "";
+  flex-grow: 1; 
+  height: 3px; 
+  background-color: #8c52ff; 
+  margin-left: 20px; 
+}

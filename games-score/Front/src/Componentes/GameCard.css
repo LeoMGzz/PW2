@@ -1,0 +1,145 @@
+.game-title {
+  font-family: "PressStart2P", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.game-title-link {
+  cursor: pointer;
+}
+
+.game-title-link:hover .game-title {
+  color: #8c52ff;
+}
+
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+
+.game-image {
+  width: 240px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.game-card {
+  display: flex;
+  width: 47%; 
+  background-color:white;
+  padding: 10px;
+  align-items: flex-start;
+  position: relative; 
+  gap: 15px;
+}
+
+
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  font-size: 1rem;
+  height: 100%; 
+}
+
+
+.game-info p {
+  margin: 5px 0; 
+}
+
+.game-reviews {
+  color: #8c52ff;
+  font-weight: bold;
+}
+  
+
+.game-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: "PressStart2P", sans-serif;
+  font-weight: bold;
+  color: #8c52ff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+
+.star-icon {
+  color: #8c52ff;
+  font-size: 16px;
+}
+
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1300px; 
+  justify-content: center;
+}
+
+.carousel-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 1rem;
+  color: #8c52ff;
+  transition: 0.2s ease;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+
+/*
+.game-platforms,
+.game-genre {
+  color: gray;
+  font-size: 1rem;
+}
+  */
+
+
+
+  
+
+
+/*
+.game-link {
+  text-decoration: none;
+}
+  */

@@ -1,0 +1,210 @@
+/* Contenedor principal */
+.user-profile-container {
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    background: white;
+  }
+  
+  /* Opciones de editar/borrar (Fuera del perfil, en la esquina superior derecha de la página) */
+  .profile-options {
+    position: fixed; 
+    top: 85px;       
+    right: 20px;     
+    display: flex;
+    gap: 15px;
+      
+  }
+  
+  
+  /* Estilos de los botones */
+  .edit-button, .delete-button, .logout-button {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  
+  /* Hover */
+  .edit-button:hover {
+    color: white;
+  }
+  
+  .delete-button:hover {
+    color: white;
+  }
+  .logout-button:hover{
+    color: white;
+  }
+  
+  /* Sección principal */
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Imagen de perfil */
+  .profile-pic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #8c52ff;
+  }
+  
+  /* Botón para cambiar la foto */
+  .change-pic-button {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #8c52ff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .change-pic-button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Información del usuario */
+  .user-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .user-details label {
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .user-details input {
+    width: 100%;
+    padding: 8px;
+
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 50px;
+    background-color: #e0e0e0;
+    font-size: 1rem;
+    color: #3d1766;
+    font-weight: bold;
+    outline: none;
+  }
+  
+  .user-details input:disabled {
+    background: #f5f5f5;
+    color: gray;
+  }
+  
+  /* Botón de confirmar cambios */
+  .confirm-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #8c52ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .confirm-button:hover {
+    background: #6a3acb;
+  }
+  
+  .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #3a0ca3;
+    text-align: center;
+  }
+  
+  .modal-content label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #5f0f40;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .modal-content button {
+    margin-top: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-content button:first-of-type {
+    background-color: #3a0ca3;
+    color: white;
+  }
+  
+  .modal-content button:first-of-type:hover {
+    background-color: #5f0fca;
+  }
+  
+  .modal-content button:last-of-type {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .modal-content button:last-of-type:hover {
+    background-color: #bbb;
+  }
+  

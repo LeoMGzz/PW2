@@ -1,0 +1,160 @@
+/*not logged in*/
+
+  .LandingPage-NotLoggedIn-Containter{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #8c52ff, #5ce1e6);
+  }
+  
+  
+  .Left-Side {
+    font-family: "PressStart2P", sans-serif;
+    flex: 1;
+    display: flex;
+    justify-content: right; 
+    align-items: center; 
+    color: white;
+    
+    text-align: center;
+    font-size: 47px;
+    font-weight: bold;
+    padding-left: 40px;
+    text-shadow:  5px  5px 0  #89e6e8,
+                  -5px  5px 0  #e88989;
+  }
+  
+
+.Right-Side {
+    flex: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end; 
+    padding-right: 0; 
+  }
+  
+  
+  .Landing-Image {
+    width: 80%;
+    max-width: 1000px;
+    object-fit: cover; 
+  }
+  
+  /*logged in*/
+
+  .LandingPage-LoggedIn-Containter{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: white;
+  }
+
+  .banner-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover;
+    
+  }
+
+ 
+.banner-overlay {
+  font-family: "PressStart2P", sans-serif;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0px 9px 0px #8c52ff;
+  cursor: pointer;
+}
+
+.banner-overlay:hover{
+  color: #8c52ff;
+  text-shadow: 0px 9px 0px white;
+}
+
+.banner-arrow {
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  text-shadow: 0px 9px 0px #8c52ff;
+  border: none;
+  cursor: pointer;
+  font-size: 5rem;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; 
+}
+
+.left-arrow {
+  left: 15px; 
+}
+
+.right-arrow {
+  right: 15px; 
+}
+
+.banner-arrow:hover {
+  color:  #8c52ff;
+  text-shadow:0px 9px 0px white;
+}
+
+.GameHighlight {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+
+}
+
+.GameHighlight h1 {
+  font-family: "OpenSans", sans-serif;
+  color: #8c52ff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 30px; 
+  white-space: nowrap; 
+}
+
+.GameHighlight::after {
+  content: "";
+  flex-grow: 1; 
+  height: 3px; 
+  background-color: #8c52ff; 
+  margin-left: 20px; 
+}
+/*
+.ver-todos-container {
+  text-align: center;
+  margin: 20px 0;
+}
+ 
+.ver-todos-button {
+  background-color: #8c52ff;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+  */
+
+.ver-todos-button:hover {
+  background-color: #8c52ff;
+}
