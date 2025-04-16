@@ -11,7 +11,7 @@ const JuegosResenados = () => {
   useEffect(() => {
     const fetchJuegos = async () => {
       try {
-        const res = await axios.get(`https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/resenas/juegos-por-usuario/${idUsuario}`);
+        const res = await axios.get(`https://pw2-production.up.railway.app/resenas/juegos-por-usuario/${idUsuario}`);
         setJuegos(res.data);
       } catch (err) {
         console.error("Error al obtener juegos reseñados:", err);
@@ -23,7 +23,7 @@ const JuegosResenados = () => {
 
   const irADetalle = async (juego) => {
     try {
-      const res = await axios.get(`https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/videojuegos/detalles/${juego.id}`);
+      const res = await axios.get(`https://pw2-production.up.railway.app/videojuegos/detalles/${juego.id}`);
       const data = res.data;
   
       navigate("/GamePage", {

@@ -217,7 +217,7 @@ app.post("/companias/crear", (req, res) => {
 
 ////////Compañias Acticas////////
 app.get("/companias/activas", (req, res) => {
-    const query = "SELECT IdCompañia, Nombre FROM Compañias WHERE Estatus = 'Activo'";
+    const query = "SELECT IdCompañia, Nombre FROM compañias WHERE Estatus = 'Activo'";
     db.query(query, (err, results) => {
         if (err) {
             console.error("Error al obtener compañías activas:", err);
@@ -280,7 +280,7 @@ app.post("/categorias/crear", (req, res) => {
   
 //////////Categorias Activas/////////////
 app.get("/categorias/activas", (req, res) => {
-    const query = "SELECT IdCategoria, Nombre, Descripcion FROM Categorias WHERE Estatus = 'Activo'";
+    const query = "SELECT IdCategoria, Nombre, Descripcion FROM categorias WHERE Estatus = 'Activo'";
     db.query(query, (err, results) => {
       if (err) {
         console.error("Error al obtener categorías:", err);

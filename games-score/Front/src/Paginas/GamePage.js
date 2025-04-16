@@ -48,7 +48,7 @@ const GamePage = () => {
 
   const fetchUpdatedRating = async () => {
     try {
-      const response = await axios.get(`https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/videojuegos/rating/${game.id}`);
+      const response = await axios.get(`https://pw2-production.up.railway.app/videojuegos/rating/${game.id}`);
       setRating(response.data.rating);
       setReviewsCount(response.data.reviews);
     } catch (error) {
@@ -59,7 +59,7 @@ const GamePage = () => {
   const checkUserReview = async () => {
     try {
       const idUsuario = localStorage.getItem("idUsuario");
-      const res = await axios.get(`https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/resenas/activas/${game.id}`);
+      const res = await axios.get(`https://pw2-production.up.railway.app/resenas/activas/${game.id}`);
       const existe = res.data.some((r) => r.autorId === parseInt(idUsuario));
       setHasUserReview(existe);
     } catch (error) {
@@ -81,7 +81,7 @@ const GamePage = () => {
     
 
     try {
-      const response = await axios.post("https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/resenas/crear", {
+      const response = await axios.post("https://pw2-production.up.railway.app/resenas/crear", {
         usuario: idUsuario,
         juego: game.id,
         calificacion: selectedRating,
@@ -123,7 +123,7 @@ window.location.reload();
     
   
     try {
-      await axios.delete(`https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/resenas/eliminar/${idReseña}`);
+      await axios.delete(`https://pw2-production.up.railway.app/resenas/eliminar/${idReseña}`);
       await MySwal.fire({
         icon: "success",
         title: "Reseña eliminada",
