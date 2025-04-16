@@ -27,7 +27,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post("https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/login", {
+      const response = await axios.post("pw2-production.up.railway.app/login", {
         email: email,
         password: password,
       });
@@ -104,7 +104,7 @@ const Login = () => {
         </form>
 
         <h4>¿No tienes una cuenta?</h4>
-        <Link to="/Registro">
+        <Link to="/Register">
           <button className="RegisterRedirect">Regístrate</button>
         </Link>
       </div>
@@ -113,4 +113,3 @@ const Login = () => {
 };
 
 export default Login;
-//

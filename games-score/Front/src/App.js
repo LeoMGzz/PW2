@@ -24,7 +24,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/QuerySearch" element={<QuerySearch />} />
-        <Route path="/registro" element={<Register />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Perfil" element={<Perfil />} />
         <Route path="/categorias" element={<RutaProtegida soloAdmin={true}><Categorias /></RutaProtegida>} />
