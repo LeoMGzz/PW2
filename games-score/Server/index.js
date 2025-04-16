@@ -404,7 +404,7 @@ app.put("/categorias/editar/:id", (req, res) => {
           WHERE R.Juego = V.IdJuego AND R.Estatus = 'Activo'
         ) AS Resenas,
         GROUP_CONCAT(P.IdPlataforma) AS PlataformaIDs,
-        GROUP_CONCAT(P.Nombre SEPARATOR ', ') AS plataformas
+        GROUP_CONCAT(P.Nombre SEPARATOR ', ') AS Plataformas
       FROM videojuegos V
       JOIN categorias C ON V.Categoria = C.IdCategoria
       JOIN compañias CD ON V.Desarrolladora = CD.IdCompañia
