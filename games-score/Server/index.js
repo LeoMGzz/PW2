@@ -5,7 +5,7 @@ const mysql = require("mysql2");
 
 
 app.use(cors({
-  origin: "https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/"
+  origin: "https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app"
 }));
 
 app.use(express.json({ limit: '100mb' }));
