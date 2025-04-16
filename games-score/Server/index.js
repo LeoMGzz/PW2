@@ -400,17 +400,17 @@ app.put("/categorias/editar/:id", (req, res) => {
         V.Rating,
         (
           SELECT COUNT(*) 
-          FROM Reseñas R 
+          FROM reseñas R 
           WHERE R.Juego = V.IdJuego AND R.Estatus = 'Activo'
         ) AS Resenas,
         GROUP_CONCAT(P.IdPlataforma) AS PlataformaIDs,
-        GROUP_CONCAT(P.Nombre SEPARATOR ', ') AS Plataformas
-      FROM Videojuegos V
-      JOIN Categorias C ON V.Categoria = C.IdCategoria
-      JOIN Compañias CD ON V.Desarrolladora = CD.IdCompañia
-      JOIN Compañias CP ON V.Publicadora = CP.IdCompañia
-      JOIN Videojuegos_Plataformas VP ON V.IdJuego = VP.IdJuego
-      JOIN Plataformas P ON VP.IdPlataforma = P.IdPlataforma
+        GROUP_CONCAT(P.Nombre SEPARATOR ', ') AS plataformas
+      FROM videojuegos V
+      JOIN categorias C ON V.Categoria = C.IdCategoria
+      JOIN compañias CD ON V.Desarrolladora = CD.IdCompañia
+      JOIN compañias CP ON V.Publicadora = CP.IdCompañia
+      JOIN videojuegos_plataformas VP ON V.IdJuego = VP.IdJuego
+      JOIN plataformas P ON VP.IdPlataforma = P.IdPlataforma
       WHERE V.Estatus = 'Activo'
       GROUP BY V.IdJuego;
     `;
@@ -549,10 +549,10 @@ app.get("/videojuegos/rating/:id", (req, res) => {
       Rating,
       (
         SELECT COUNT(*) 
-        FROM Reseñas 
+        FROM reseñas 
         WHERE Juego = ? AND Estatus = 'Activo'
       ) AS Reviews
-    FROM Videojuegos 
+    FROM videojuegos 
     WHERE IdJuego = ?
   `;
 
@@ -584,8 +584,8 @@ app.get("/resenas/activas/:id", (req, res) => {
        R.Reseñador,
       U.Username,
       U.Foto_Perfil
-    FROM Reseñas R
-    JOIN Usuarios U ON R.Reseñador = U.IdUsuario
+    FROM reseñas R
+    JOIN usuarios U ON R.Reseñador = U.IdUsuario
     WHERE R.Juego = ? AND R.Estatus = 'Activo'
     ORDER BY R.Fecha_Reseña DESC
   `;
@@ -739,8 +739,8 @@ app.get("/resenas/juegos-por-usuario/:id", (req, res) => {
       V.IdJuego,
       V.Nombre,
       V.Imagen
-    FROM Reseñas R
-    JOIN Videojuegos V ON R.Juego = V.IdJuego
+    FROM reseñas R
+    JOIN videojuegos V ON R.Juego = V.IdJuego
     WHERE R.Reseñador = ? AND R.Estatus = 'Activo'
     GROUP BY V.IdJuego
   `;
@@ -781,17 +781,17 @@ app.get("/videojuegos/detalles/:id", (req, res) => {
       V.Rating,
       (
         SELECT COUNT(*) 
-        FROM Reseñas R 
+        FROM reseñas R 
         WHERE R.Juego = V.IdJuego AND R.Estatus = 'Activo'
       ) AS Resenas,
       GROUP_CONCAT(P.IdPlataforma) AS PlataformaIDs,
       GROUP_CONCAT(P.Nombre SEPARATOR ', ') AS Plataformas
-    FROM Videojuegos V
-    JOIN Categorias C ON V.Categoria = C.IdCategoria
-    JOIN Compañias CD ON V.Desarrolladora = CD.IdCompañia
-    JOIN Compañias CP ON V.Publicadora = CP.IdCompañia
-    JOIN Videojuegos_Plataformas VP ON V.IdJuego = VP.IdJuego
-    JOIN Plataformas P ON VP.IdPlataforma = P.IdPlataforma
+    FROM videojuegos V
+    JOIN categorias C ON V.Categoria = C.IdCategoria
+    JOIN compañias CD ON V.Desarrolladora = CD.IdCompañia
+    JOIN compañias CP ON V.Publicadora = CP.IdCompañia
+    JOIN videojuegos_plataformas VP ON V.IdJuego = VP.IdJuego
+    JOIN plataformas P ON VP.IdPlataforma = P.IdPlataforma
     WHERE V.Estatus = 'Activo' AND V.IdJuego = ?
     GROUP BY V.IdJuego;
   `;
