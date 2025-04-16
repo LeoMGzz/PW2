@@ -104,7 +104,7 @@ const Login = () => {
         </form>
 
         <h4>¿No tienes una cuenta?</h4>
-        <Link to="/Register">
+        <Link to="/Registro">
           <button className="RegisterRedirect">Regístrate</button>
         </Link>
       </div>

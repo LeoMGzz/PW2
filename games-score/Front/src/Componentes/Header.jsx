@@ -96,7 +96,7 @@ const Header = () => {
                     </>
                 ) : (
                     <>
-                        <Link to="/register">
+                        <Link to="/registro">
                             <button>Registrarse</button>
                         </Link>
                         <div className="divider"></div>
