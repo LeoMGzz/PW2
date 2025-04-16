@@ -10,7 +10,7 @@ const UserReviews = ({ gameId, reloadTrigger, onDeleteReview  }) => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await axios.get(`https://pw2-production.up.railway.app/resenas/activas/${gameId}`);
+        const res = await axios.get(`https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/resenas/activas/${gameId}`);
         const allReviews = res.data;
 
         const userReview = allReviews.find((r) => r.autorId === userId);

@@ -30,7 +30,7 @@ const Videojuegos = () => {
 
   const obtenerCompanias = async () => {
     try {
-      const response = await axios.get("https://pw2-production.up.railway.app/companias/activas");
+      const response = await axios.get("https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/companias/activas");
       setCompanias(response.data);
     } catch (error) {
       console.error("Error al obtener compañías:", error);
@@ -39,7 +39,7 @@ const Videojuegos = () => {
 
   const obtenerCategorias = async () => {
     try {
-      const response = await axios.get("https://pw2-production.up.railway.app/categorias/activas");
+      const response = await axios.get("https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/categorias/activas");
       setCategorias(response.data);
     } catch (error) {
       console.error("Error al obtener categorías:", error);
@@ -48,7 +48,7 @@ const Videojuegos = () => {
 
   const obtenerPlataformas = async () => {
     try {
-      const response = await axios.get("https://pw2-production.up.railway.app/plataformas/activas");
+      const response = await axios.get("https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/plataformas/activas");
       setPlataformas(response.data);
     } catch (error) {
       console.error("Error al obtener plataformas activas:", error);
@@ -108,7 +108,7 @@ const Videojuegos = () => {
     
 
     try {
-      const response = await axios.post("https://pw2-production.up.railway.app/videojuegos/crear", {
+      const response = await axios.post("https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/videojuegos/crear", {
         nombre,
         imagen: imageBase64,
         año_lanzamiento: año,
@@ -186,7 +186,7 @@ checkboxes.forEach((checkbox) => (checkbox.checked = false));
     try {
       const idJuego = location.state?.id;
   
-      const response = await axios.put(`https://pw2-production.up.railway.app/videojuegos/editar/${idJuego}`, {
+      const response = await axios.put(`https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/videojuegos/editar/${idJuego}`, {
         nombre,
         imagen: imageBase64, 
         año_lanzamiento: año,

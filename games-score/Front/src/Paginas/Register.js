@@ -97,7 +97,7 @@ const Register = () => {
     if (!validateForm()) return;
 
     try {
-      const response = await axios.post("https://pw2-production.up.railway.app/register", {
+      const response = await axios.post("https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/register", {
         email: formData.email,
         username: formData.username,
         password: formData.password,

@@ -16,7 +16,7 @@ const GameList = ({
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get("https://pw2-production.up.railway.app/videojuegos/activos");
+        const response = await axios.get("https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/videojuegos/activos");
         const juegos = response.data.map(juego => ({
           id: juego.IdJuego,
           image: `data:image/jpeg;base64,${juego.Imagen}`,

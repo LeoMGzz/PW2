@@ -42,7 +42,7 @@ const GameCard = ({
     if (!confirmacion.isConfirmed) return;
   
     try {
-      const response = await axios.put(`https://pw2-production.up.railway.app/videojuegos/eliminar/${id}`);
+      const response = await axios.put(`https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/videojuegos/eliminar/${id}`);
       await MySwal.fire({
         icon: "success",
         title: "Eliminado",

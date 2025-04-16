@@ -27,7 +27,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post("https://pw2-production.up.railway.app/login", {
+      const response = await axios.post("https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/login", {
         email: email,
         password: password,
       });

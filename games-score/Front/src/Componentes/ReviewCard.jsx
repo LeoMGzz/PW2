@@ -37,7 +37,7 @@ const displayName = isOwner ? "Tú" : username;
 
   const handleConfirmEdit = async () => {
     try {
-      const res = await axios.put(`https://pw2-production.up.railway.app/resenas/editar/${reseñaId}`, {
+      const res = await axios.put(`https://pw-2-7ybuch6af-leos-projects-ff2b9494.vercel.app/resenas/editar/${reseñaId}`, {
         calificacion: editedRating,
         comentario: reviewText,
       });
