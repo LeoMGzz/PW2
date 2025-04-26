@@ -151,22 +151,37 @@ window.location.reload();
 
         <div className="game-info-page">
           <h2 className="game-title-page">{game.title}</h2>
-          <p className="game-platforms-page">
-            {game.platforms
-              ? game.platforms.split(", ").map((platform, index) => (
-                  <span key={index}>
-                    <a>{platform}</a>
-                    {index !== game.platforms.split(", ").length - 1 ? ", " : ""}
-                  </span>
-                ))
-              : "Plataformas no disponibles"}
-          </p>
-          <p className="game-genre-page">Categoría: {game.genre}</p>
-          <p className="game-details-page">Año de Lanzamiento: {game.year}</p>
-          <p className="game-details-page">Edad mínima: {game.ageRating}</p>
-          <p className="game-details-page">Desarrolladora: {game.desarrolladora}</p>
-          <p className="game-details-page">Publicadora: {game.publicadora}</p>
-          <p className="game-description-page">Descripción: {game.description}</p>
+          <p className="game-details-page">
+  <span className="game-page-label">Plataformas:</span>{" "}
+  {game.platforms
+    ? game.platforms.split(", ").map((platform, index) => (
+        <span key={index}>
+          {platform}
+          {index !== game.platforms.split(", ").length - 1 ? ", " : ""}
+        </span>
+      ))
+    : "No disponibles"}
+</p>
+
+<p className="game-details-page">
+  <span className="game-page-label">Categoría:</span> {game.genre}
+</p>
+<p className="game-details-page">
+  <span className="game-page-label">Año de Lanzamiento:</span> {game.year}
+</p>
+<p className="game-details-page">
+  <span className="game-page-label">Edad mínima:</span> {game.ageRating}
+</p>
+<p className="game-details-page">
+  <span className="game-page-label">Desarrolladora:</span> {game.desarrolladora}
+</p>
+<p className="game-details-page">
+  <span className="game-page-label">Publicadora:</span> {game.publicadora}
+</p>
+<p className="game-description-page">
+  <span className="game-page-label">Descripción:</span> {game.description}
+</p>
+
           <p className="game-reviews-page">{reviewsCount} Reseñas</p>
         </div>
 
