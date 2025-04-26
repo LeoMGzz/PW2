@@ -52,6 +52,16 @@
   height: 100%; 
 }
 
+.game-details {
+  color: #8c52ff; 
+
+}
+
+.game-label {
+  color: gray;   
+  
+}
+
 
 .game-info p {
   margin: 5px 0; 
@@ -125,13 +135,11 @@
 }
 
 
-/*
-.game-platforms,
-.game-genre {
-  color: gray;
-  font-size: 1rem;
+
+.game-platforms{
+  color: #8c52ff
 }
-  */
+  
 
 
 

@@ -42,7 +42,7 @@ const GameCard = ({
     if (!confirmacion.isConfirmed) return;
   
     try {
-      const response = await axios.put(`https://pw2-production.up.railway.app/videojuegos/eliminar/${id}`);
+      const response = await axios.put(`http://localhost:3001/videojuegos/eliminar/${id}`);
       await MySwal.fire({
         icon: "success",
         title: "Eliminado",
@@ -99,10 +99,22 @@ const GameCard = ({
     </p>
   </div>
         <p className="game-platforms">{platforms}</p>
-        <p className="game-details">Categoría: {genre}</p>
-        <p className="game-details">Año: {year} | Edad mínima: {ageRating}</p>
-        <p className="game-details">Desarrolladora: {desarrolladora}</p>
-        <p className="game-details">Publicadora: {publicadora}</p>
+        <p className="game-details">
+        <span className="game-label">Categoría:</span> {genre}
+        </p>
+        <p className="game-details">
+        <span className="game-label">Año:</span> {year} 
+        </p>
+        <p className="game-details">
+        <span className="game-label"> Edad mínima:</span> {ageRating}
+        </p>
+        <p className="game-details">
+        <span className="game-label">Desarrolladora:</span> {desarrolladora}
+        </p>
+        <p className="game-details">
+        <span className="game-label">Publicadora:</span> {publicadora}
+        </p>
+
         <p className="game-reviews">{reviews} Reseñas</p>
         
 

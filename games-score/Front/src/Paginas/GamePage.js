@@ -48,7 +48,7 @@ const GamePage = () => {
 
   const fetchUpdatedRating = async () => {
     try {
-      const response = await axios.get(`https://pw2-production.up.railway.app/videojuegos/rating/${game.id}`);
+      const response = await axios.get(`http://localhost:3001/videojuegos/rating/${game.id}`);
       setRating(response.data.rating);
       setReviewsCount(response.data.reviews);
     } catch (error) {
@@ -59,7 +59,7 @@ const GamePage = () => {
   const checkUserReview = async () => {
     try {
       const idUsuario = localStorage.getItem("idUsuario");
-      const res = await axios.get(`https://pw2-production.up.railway.app/resenas/activas/${game.id}`);
+      const res = await axios.get(`http://localhost:3001/resenas/activas/${game.id}`);
       const existe = res.data.some((r) => r.autorId === parseInt(idUsuario));
       setHasUserReview(existe);
     } catch (error) {
@@ -81,7 +81,7 @@ const GamePage = () => {
     
 
     try {
-      const response = await axios.post("https://pw2-production.up.railway.app/resenas/crear", {
+      const response = await axios.post("http://localhost:3001/resenas/crear", {
         usuario: idUsuario,
         juego: game.id,
         calificacion: selectedRating,
@@ -123,7 +123,7 @@ window.location.reload();
     
   
     try {
-      await axios.delete(`https://pw2-production.up.railway.app/resenas/eliminar/${idReseña}`);
+      await axios.delete(`http://localhost:3001/resenas/eliminar/${idReseña}`);
       await MySwal.fire({
         icon: "success",
         title: "Reseña eliminada",
@@ -161,12 +161,25 @@ window.location.reload();
                 ))
               : "Plataformas no disponibles"}
           </p>
-          <p className="game-genre-page">Categoría: {game.genre}</p>
-          <p className="game-details-page">Año de Lanzamiento: {game.year}</p>
-          <p className="game-details-page">Edad mínima: {game.ageRating}</p>
-          <p className="game-details-page">Desarrolladora: {game.desarrolladora}</p>
-          <p className="game-details-page">Publicadora: {game.publicadora}</p>
-          <p className="game-description-page">Descripción: {game.description}</p>
+          <p className="game-genre-page">
+          <span className="game-page-label">Categoría:</span> {game.genre}
+          </p>
+          <p className="game-details-page">
+          <span className="game-page-label">Año de Lanzamiento:</span> {game.year}
+          </p>
+          <p className="game-details-page">
+          <span className="game-page-label">Edad mínima:</span> {game.ageRating}
+          </p>
+          <p className="game-details-page">
+          <span className="game-page-label">Desarrolladora:</span> {game.desarrolladora}
+          </p>
+          <p className="game-details-page">
+          <span className="game-page-label">Publicadora:</span> {game.publicadora}
+          </p>
+          <p className="game-description-page">
+          <span className="game-page-label">Descripción:</span> {game.description}
+          </p>
+
           <p className="game-reviews-page">{reviewsCount} Reseñas</p>
         </div>
 

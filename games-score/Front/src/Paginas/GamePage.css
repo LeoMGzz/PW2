@@ -37,13 +37,20 @@
   color: black;
   }
 
+  /* Estilo para los labels dentro del bloque de información */
+.game-page-label {
+  color: gray;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
   
   /* Plataformas y Género */
   .game-platforms-page,
   .game-genre-page,
   .game-details-page,
   .game-description-page{
-    color: gray;
+    color:#8c52ff;
     font-size: 1rem;
   }
   .game-reviews-page{
