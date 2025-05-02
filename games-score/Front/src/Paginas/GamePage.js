@@ -61,7 +61,7 @@ const GamePage = () => {
       const idUsuario = localStorage.getItem("idUsuario");
       const res = await axios.get(`https://pw2-production.up.railway.app/resenas/activas/${game.id}`);
       const existe = res.data.some((r) => r.autorId === parseInt(idUsuario));
-      setHasUserReview(existe);
+      setHasUserReview(existe); 
     } catch (error) {
       console.error("Error al verificar reseña del usuario:", error);
     }
